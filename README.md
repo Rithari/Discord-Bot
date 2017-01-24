@@ -103,6 +103,6 @@ Some of the features here are still broken and some are still in development, th
 Some of the features were made possible thanks to other programmers which include:
 * BetterCoder - Thank you for helping with the auto update library.
 * The Discord API Server - Without it, a lot of things which I would never have noticed otherwise were noticed, help was given and so was advice. A great spot if you're having some trouble with the API.
-* xplatinumx - Thank you for some of the features and helping me out with the initial design of the form. Inspired me to do my own winforms discord bot.
+* xplatinum15 - Thank you for some of the features and helping me out with the initial design of the form. Inspired me to do my own winforms discord bot.
 * Everyone - Thanks to all of the people that have followed this bot's development for their moral support.
 
