@@ -214,10 +214,10 @@ namespace DiscordBot2
                 }
                 await Client.Connect("Bot " + token);
                 await Task.Delay(2000);
-                userscount.ForeColor = Color.Lime;
+               /* userscount.ForeColor = Color.Lime;
                 channelcount.ForeColor = Color.Lime;
                 servercount.ForeColor = Color.Lime;
-                listingbutton.ForeColor = Color.Lime;
+                listingbutton.ForeColor = Color.Lime;*/
                 
                 while (true)
                 {
