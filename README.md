@@ -2,7 +2,10 @@
 Written in C# wit the Discord.NET library to bring a unique experience by adding some cryptography and an auto update system to common bot features. 
 
 This bot is **WORK IN PROGRESS**.
+
 Currently, It's just me who works on this bot, but thanks to others more features were able to be included in this project. They are credited at the end of this readme.
+
+Some of the features here are still broken and some are still in development, the sole purposes this repository serves is to give others the opportunity of contributing and learning.
 
 ##Features & Commands##
 * Logging, this bot logs every single message in a separate folder stored in the local directory in a form of .txt, there is one file for each different channel there is. There is also more intensive logging, such as edited messages, deleted one, banned users, unbanned, role assigned... basically it logs everything there is to log in a separate channel (#logs, which can be created by the bot user);
