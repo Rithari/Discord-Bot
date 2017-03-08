@@ -112,7 +112,6 @@ namespace DiscordBot2
             this.console.Name = "console";
             this.console.Size = new System.Drawing.Size(609, 358);
             this.console.TabIndex = 6;
-            this.console.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // servercount
             // 

@@ -64,14 +64,14 @@ namespace DiscordBot2
         private void button1_Click(object sender, EventArgs e)
         {
             // When this button is pressed, the Console will be cleared using an "unclean" method as you can see below.
-            Console.Clear();
+            console.Clear();
             Console.WriteLine(@" __      __       .__                             ._.
 /  \    /  \ ____ |  |   ____  ____   _____   ____| |
 \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ |
  \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/\|
   \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >_
        \/       \/          \/            \/     \/\/");
-            Console.Clear();
+            console.Clear();
 
 
             // It will also see if the Remember Token box is checked and if not.
@@ -1337,11 +1337,6 @@ namespace DiscordBot2
 
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             versionnumber.Text = this.ApplicationAssembly.GetName().Version.ToString();
@@ -1357,8 +1352,6 @@ namespace DiscordBot2
             Writer = new TextBoxStreamWriter(console); //status = the TextBox element
             Console.SetOut(Writer);
             Console.WriteLine("Created by Rithari.\nC# Discord bot with integrated auto update.\n");
-          //  Console.WriteLine(
-            //    "░░░░░░░░░░░░░░░░░▄▄▄▄▄▄\r\n░░░░░░░░░░░░░▄▄▀▀░░░░░░▀▄\r\n░░░░░░░░░░░▄▀░░░░░░░░░░▄▄▌░▄██▀▄\r\n░░░░░░░▀▄▄▀░░░░░░░░░░░░▄▄███▀▀▌▐\r\n░░░░░░▐▄▀███▄░░▄█▄▄░░▄▀▒▒▒▒▀▀▄▐░▌\r\n░░░░░▄▌▀▄▐▀▒▀▄▀▀▒▒▒▀▀▄▀▄▒▒▒▒▒▒▀▄▌▀\r\n░░░░▐░▌▐▄▌▒▒▒▄▀▀▄▒▒▒▐▄▒▒▒▒▒▒▒▒▒▒▐▀\r\n░░░░▐▄▐▐▒▒▒▒▒▒▒▐░▌▒▒▒▌▀▄▀▀▄▒▒▒▒▒▒▌\r\n░░░░▐▄▄▌▒▒▒▌▒▄▀▀▄▀▄▒▒▌▌░░░▐▄▒▒▒▒▒▐\r\n░░░░▐▌▒▒▒▒▐▒▄▀░░░█░▀▄▐░▌░░▐█▐▒▒▀▄▐\r\n░░░░░▌▒▒▒▒▐▀▄░░░▄█░░░▀▐▄▄███░▌▒▐▐▐\r\n░░░░▐▒▒▒▒▒▌░█▄▄███▌░░░▐████▀▌▐▒▒▌▀\r\n░░░░▐▒▒▒▒▒▌░████▌█▌░░░░█▀█▀░▌▐▒▒▐\r\n░░░░▐█▒▒▒▒▌░▐░▀▀░▐░░░▀░░▀░░░░░▀▌▐\r\n░░░░▐█▌▒▒▒▐░░░░░░▐▄▄▀▄▀░░░░░░░▄▀▌\r\n▄▀▄░░██▄▒▒▒▌░░░░░░▐▄▀░░░░░░░▄▀▒█\r\n▀▄▐▌░▐█▀▄▒▒▀▄░▄▄▄▄░░░▄▄▀▀▀██▒▒█\r\n░▐██░░██░▀▄▐░▀▌░░░▀█▀▌░░░▐▀▐▄▀\r\n░░██▌▐█▌░▐░▀▀▌▌░░▄░▌░▌▄░░▌▐﻿     HoNk HoNk MoThErFuCkEr :o)﻿\r\n");
             tokenbox.Text = File.Exists("cache.txt") ? File.ReadAllText("cache.txt") : "";
             remembercheckbox.Checked = File.Exists("cache.txt") ? true : false;
             listingbutton.Enabled = false;
