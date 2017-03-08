@@ -254,13 +254,13 @@
     <None Include="Resources\update.gif" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SharpUpdate-master\SharpUpdate\SharpUpdate.csproj">
+    <None Include="Resources\262748.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpUpdate\SharpUpdate\SharpUpdate.csproj">
       <Project>{811c1d69-764f-4335-8363-b93a1d106268}</Project>
       <Name>SharpUpdate</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\262748.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

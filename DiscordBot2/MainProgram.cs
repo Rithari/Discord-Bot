@@ -64,63 +64,14 @@ namespace DiscordBot2
         private void button1_Click(object sender, EventArgs e)
         {
             // When this button is pressed, the Console will be cleared using an "unclean" method as you can see below.
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
+            Console.Clear();
             Console.WriteLine(@" __      __       .__                             ._.
 /  \    /  \ ____ |  |   ____  ____   _____   ____| |
 \   \/\/   // __ \|  | _/ ___\/  _ \ /     \_/ __ \ |
  \        /\  ___/|  |_\  \__(  <_> )  Y Y  \  ___/\|
   \__/\  /  \___  >____/\___  >____/|__|_|  /\___  >_
        \/       \/          \/            \/     \/\/");
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
+            Console.Clear();
 
 
             // It will also see if the Remember Token box is checked and if not.
@@ -275,13 +226,13 @@ namespace DiscordBot2
                      await e.Channel.SendMessage("I'm already playing music!");
                      return;
                  }
-                 IsStreaming = true;
                  var voiceChannel = e.Server.FindChannels("Music").FirstOrDefault();
                  if (voiceChannel == null)
                  {
                      await e.Channel.SendMessage("Yeah you kinda need to create a voicechannel called 'Music'. ");
                      return;
                  }
+                 IsStreaming = true;
                  //Additionally, we create an autoplay using a timer.
                  var vClient = await Client.GetService<AudioService>().Join(voiceChannel);
                  var timer = new System.Timers.Timer();
