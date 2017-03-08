@@ -115,7 +115,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="beakoExtensions.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="RjandelHelper.cs" />
     <Compile Include="MainProgram.cs">
@@ -160,7 +159,6 @@
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DiscordBot2_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

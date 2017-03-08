@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Media;
 using System.Net;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -16,14 +13,8 @@ using Discord;
 using Discord.Commands;
 using EncryptStringSample;
 using Color = System.Drawing.Color;
-using BeakoBotNew;
 using Discord.Audio;
-using NAudio;
 using NAudio.Wave;
-using NAudio.CoreAudioApi;
-using Newtonsoft.Json;
-using RestSharp.Extensions;
-using Role = Discord.Role;
 using SharpUpdate;
 
 
