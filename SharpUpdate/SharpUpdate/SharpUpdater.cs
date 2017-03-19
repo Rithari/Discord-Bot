@@ -33,8 +33,8 @@ namespace SharpUpdate
 
             // Set up backgroundworker
             this.bgWorker = new BackgroundWorker();
-            this.bgWorker.DoWork += new DoWorkEventHandler(bgWorker_DoWork);
-            this.bgWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(bgWorker_RunWorkerCompleted);
+            this.bgWorker.DoWork += new DoWorkEventHandler(BgWorker_DoWork);
+            this.bgWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BgWorker_RunWorkerCompleted);
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace SharpUpdate
         /// <summary>
         /// Checks for/parses update.xml on server
         /// </summary>
-        private void bgWorker_DoWork(object sender, DoWorkEventArgs e)
+        private void BgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             ISharpUpdatable application = (ISharpUpdatable)e.Argument;
 
@@ -64,7 +64,7 @@ namespace SharpUpdate
         /// <summary>
         /// After the background worker is done, prompt to update if there is one
         /// </summary>
-        private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void BgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             // If there is a file on the server
 			if (!e.Cancelled)
@@ -129,11 +129,13 @@ namespace SharpUpdate
         {
             string argument = "/C choice /C Y /N /D Y /T 4 & Del /F /Q \"{0}\" & choice /C Y /N /D Y /T 2 & Move /Y \"{1}\" \"{2}\" & Start \"\" /D \"{3}\" \"{4}\" {5}";
 
-            ProcessStartInfo Info = new ProcessStartInfo();
-            Info.Arguments = String.Format(argument, currentPath, tempFilePath, newPath, Path.GetDirectoryName(newPath), Path.GetFileName(newPath), launchArgs);
-            Info.WindowStyle = ProcessWindowStyle.Hidden;
-            Info.CreateNoWindow = true;
-            Info.FileName = "cmd.exe";
+            ProcessStartInfo Info = new ProcessStartInfo()
+            {
+                Arguments = String.Format(argument, currentPath, tempFilePath, newPath, Path.GetDirectoryName(newPath), Path.GetFileName(newPath), launchArgs),
+                WindowStyle = ProcessWindowStyle.Hidden,
+                CreateNoWindow = true,
+                FileName = "cmd.exe"
+            };
             Process.Start(Info);
         }
     }

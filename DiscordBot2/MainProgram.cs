@@ -16,11 +16,13 @@ using Color = System.Drawing.Color;
 using Discord.Audio;
 using NAudio.Wave;
 using SharpUpdate;
+using MaterialSkin;
 
 
 //Our namespace. This is where all begins!
 namespace DiscordBot2
 {
+    // public partial class DiscordBot : MaterialForm, ISharpUpdatable <--- If you want to use MaterialSkin.
     public partial class DiscordBot : Form, ISharpUpdatable
     {
         //Here we're implementing a few fields:a textwriter, 2 booleans, 2 timers and our DiscordClient named Client.
@@ -61,7 +63,7 @@ namespace DiscordBot2
             return returnImage;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             // When this button is pressed, the Console will be cleared using an "unclean" method as you can see below.
             console.Clear();
@@ -154,7 +156,7 @@ namespace DiscordBot2
                     Console.WriteLine(@"Please enter a Token.");
                     return;
                 }
-                await Client.Connect("Bot " + token);
+                await Client.Connect(token, TokenType.Bot);
                 await Task.Delay(2000);
                /* userscount.ForeColor = Color.Lime;
                 channelcount.ForeColor = Color.Lime;
@@ -235,9 +237,11 @@ namespace DiscordBot2
                  IsStreaming = true;
                  //Additionally, we create an autoplay using a timer.
                  var vClient = await Client.GetService<AudioService>().Join(voiceChannel);
-                 var timer = new System.Timers.Timer();
-                 timer.Interval = 500;
-                 timer.AutoReset = false;
+                 var timer = new System.Timers.Timer()
+                 {
+                     Interval = 500,
+                     AutoReset = false
+                 };
                  timer.Elapsed += (o, x) =>
                  {
                      SendAudio(vClient);
@@ -288,8 +292,7 @@ namespace DiscordBot2
                         return;
 
                     }
-                    int messageToCleanAmount = 0;
-                    if (int.TryParse(e.Message.Text.Remove(0, 7), out messageToCleanAmount))
+                    if (int.TryParse(e.Message.Text.Remove(0, 7), out int messageToCleanAmount))
                     {
                         await e.Channel.DownloadMessages(messageToCleanAmount);
 
@@ -1316,7 +1319,7 @@ namespace DiscordBot2
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             if (Client != null)
             {
@@ -1359,7 +1362,7 @@ namespace DiscordBot2
 
         }
 
-        private void decryptbtn_Click(object sender, EventArgs e)
+        private void Decryptbtn_Click(object sender, EventArgs e)
         {
             if (texttodecrypt.Text == string.Empty)
             {
@@ -1374,7 +1377,7 @@ namespace DiscordBot2
             texttodecrypt.Text = toReturn;
         }
 
-        private void encryptbtn_Click(object sender, EventArgs e)
+        private void Encryptbtn_Click(object sender, EventArgs e)
         {
             if (texttoencrypt.Text == string.Empty)
             {
@@ -1390,31 +1393,31 @@ namespace DiscordBot2
            texttoencrypt.Text = toReturn;
         }
 
-        private void listingbutton_Click(object sender, EventArgs e)
+        private void Listingbutton_Click(object sender, EventArgs e)
         {
             Listing form = new Listing();
             form.Show();
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PictureBox1_Click(object sender, EventArgs e)
         {
             MessageBox.Show( "ENCRYPTION\n\n1)Enter a string to encrypt.\n2)Enter a password to secure your encryption.\n3)Click on the encrypt button and store the encrypted string along with the password somewhere safe.\n\n\nDECRYPTION\n\n1)Enter an encrypted string.\n2)Enter the password you have safely stored during the encryption progress.\n3Click on the decrypt button and enjoy your string as if it was never encrypted :O!\n\n\nAlgorithm coded by Rithari.","Tutorial");
         }
 
-        private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             updater.DoUpdate();
             //  var simpleSound = new SoundPlayer(@"honk.wav");
             // simpleSound.Play();
         }
 
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }
 
-        private void botsettingsbutton_Click(object sender, EventArgs e)
+        private void Botsettingsbutton_Click(object sender, EventArgs e)
         {
             Settings form = new Settings();
             form.Show();

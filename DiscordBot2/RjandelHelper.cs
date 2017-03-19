@@ -11,9 +11,10 @@ namespace ImageCipher
         // Example usage: EncryptBytes(someFileBytes, "SensitivePhrase", "SodiumChloride");
         public static byte[] EncryptBytes(byte[] inputBytes, string passPhrase, string saltValue)
         {
-            RijndaelManaged RijndaelCipher = new RijndaelManaged();
-
-            RijndaelCipher.Mode = CipherMode.CBC;
+            RijndaelManaged RijndaelCipher = new RijndaelManaged()
+            {
+                Mode = CipherMode.CBC
+            };
             byte[] salt = Encoding.ASCII.GetBytes(saltValue);
             PasswordDeriveBytes password = new PasswordDeriveBytes(passPhrase, salt, "SHA1", 2);
 
@@ -34,9 +35,10 @@ namespace ImageCipher
         // Example usage: DecryptBytes(encryptedBytes, "SensitivePhrase", "SodiumChloride");
         public static byte[] DecryptBytes(byte[] encryptedBytes, string passPhrase, string saltValue)
         {
-            RijndaelManaged RijndaelCipher = new RijndaelManaged();
-
-            RijndaelCipher.Mode = CipherMode.CBC;
+            RijndaelManaged RijndaelCipher = new RijndaelManaged()
+            {
+                Mode = CipherMode.CBC
+            };
             byte[] salt = Encoding.ASCII.GetBytes(saltValue);
             PasswordDeriveBytes password = new PasswordDeriveBytes(passPhrase, salt, "SHA1", 2);
 

@@ -67,7 +67,7 @@ namespace DiscordBot2
             this.Title.BackColor = System.Drawing.Color.Transparent;
             this.Title.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.Title.Location = new System.Drawing.Point(3, 5);
+            this.Title.Location = new System.Drawing.Point(2, 9);
             this.Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(380, 45);
@@ -87,7 +87,7 @@ namespace DiscordBot2
             this.connectbutton.TabStop = false;
             this.connectbutton.Text = "Connect";
             this.connectbutton.UseVisualStyleBackColor = false;
-            this.connectbutton.Click += new System.EventHandler(this.button1_Click);
+            this.connectbutton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dcbutton
             // 
@@ -100,7 +100,7 @@ namespace DiscordBot2
             this.dcbutton.TabIndex = 5;
             this.dcbutton.Text = "Disconnect";
             this.dcbutton.UseVisualStyleBackColor = false;
-            this.dcbutton.Click += new System.EventHandler(this.button2_Click);
+            this.dcbutton.Click += new System.EventHandler(this.Button2_Click);
             // 
             // console
             // 
@@ -155,7 +155,7 @@ namespace DiscordBot2
             this.tokenlabel.BackColor = System.Drawing.Color.Transparent;
             this.tokenlabel.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tokenlabel.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.tokenlabel.Location = new System.Drawing.Point(2, 54);
+            this.tokenlabel.Location = new System.Drawing.Point(7, 78);
             this.tokenlabel.Name = "tokenlabel";
             this.tokenlabel.Size = new System.Drawing.Size(68, 18);
             this.tokenlabel.TabIndex = 11;
@@ -165,7 +165,7 @@ namespace DiscordBot2
             // 
             this.tokenbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tokenbox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tokenbox.Location = new System.Drawing.Point(66, 53);
+            this.tokenbox.Location = new System.Drawing.Point(81, 68);
             this.tokenbox.Name = "tokenbox";
             this.tokenbox.PasswordChar = '*';
             this.tokenbox.Size = new System.Drawing.Size(446, 22);
@@ -270,7 +270,7 @@ namespace DiscordBot2
             this.encryptbtn.TabIndex = 23;
             this.encryptbtn.Text = "Encrypt";
             this.encryptbtn.UseVisualStyleBackColor = false;
-            this.encryptbtn.Click += new System.EventHandler(this.encryptbtn_Click);
+            this.encryptbtn.Click += new System.EventHandler(this.Encryptbtn_Click);
             // 
             // decryptbtn
             // 
@@ -282,7 +282,7 @@ namespace DiscordBot2
             this.decryptbtn.TabIndex = 24;
             this.decryptbtn.Text = "Decrypt";
             this.decryptbtn.UseVisualStyleBackColor = false;
-            this.decryptbtn.Click += new System.EventHandler(this.decryptbtn_Click);
+            this.decryptbtn.Click += new System.EventHandler(this.Decryptbtn_Click);
             // 
             // texttoencrypt
             // 
@@ -311,7 +311,7 @@ namespace DiscordBot2
             this.listingbutton.TabIndex = 27;
             this.listingbutton.Text = "Server Browser";
             this.listingbutton.UseVisualStyleBackColor = false;
-            this.listingbutton.Click += new System.EventHandler(this.listingbutton_Click);
+            this.listingbutton.Click += new System.EventHandler(this.Listingbutton_Click);
             // 
             // pictureBox1
             // 
@@ -323,16 +323,16 @@ namespace DiscordBot2
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // backgroundWorker1
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1_DoWork);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // botsettingsbutton
             // 
@@ -343,7 +343,7 @@ namespace DiscordBot2
             this.botsettingsbutton.TabIndex = 32;
             this.botsettingsbutton.Text = "Settings";
             this.botsettingsbutton.UseVisualStyleBackColor = true;
-            this.botsettingsbutton.Click += new System.EventHandler(this.botsettingsbutton_Click);
+            this.botsettingsbutton.Click += new System.EventHandler(this.Botsettingsbutton_Click);
             // 
             // versionnumber
             // 
