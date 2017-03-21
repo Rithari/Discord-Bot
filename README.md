@@ -1,7 +1,7 @@
 # Rithari's Discord Bot
-Written in C# wit the Discord.NET library to bring a unique experience by adding some cryptography and an auto update system to common bot features. 
+Written in C# wit the Discord.NET library to bring a unique experience by adding some cryptography and an auto update system to common bot features. (0.9.6 Discord.NET)
 
-This bot is **WORK IN PROGRESS**.
+This bot is **dead**. Refer to newer repository for an updated version.
 
 Currently, It's just me who works on this bot, but thanks to others more features were able to be included in this project. They are credited at the end of this readme.
 
